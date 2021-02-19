@@ -5,13 +5,6 @@ const isPromise = (obj: any) => {
   return !!obj && (typeof obj === "object" || typeof obj === "function") && typeof obj.then === "function";
 };
 
-export interface PromisePayload<A, P> {
-  type: A;
-  payload?: P;
-  error?: string;
-  status: "fetching" | "resolved" | "rejected";
-}
-
 const reduxPromise: Middleware<{}, any> = ({ dispatch }) => (next) => (action) => {
   if (!isFSA(action)) {
     if (isPromise(action)) {
