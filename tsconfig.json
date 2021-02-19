@@ -16,5 +16,5 @@
     "esModuleInterop": true,
     "declaration": true
   },
-  "include": ["src", "test", "index.d.ts"]
+  "include": ["src", "test", "types"]
 }

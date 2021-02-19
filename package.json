@@ -1,6 +1,6 @@
 {
   "name": "@pkimbrel/redux-promise",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "Promise middleware for Redux.  Based on https://github.com/redux-utilities/redux-promise by https://github.com/timche.",
   "repository": {
@@ -21,7 +21,7 @@
   "author": "Paul Kimbrel <pkimbrel@gmail.com>",
   "type": "commonjs",
   "main": "lib/index.js",
-  "types": "src/index.d.ts",
+  "types": "lib/index.d.ts",
   "sideEffects": false,
   "files": [
     "lib",
@@ -31,7 +31,7 @@
     "start": "nodemon",
     "clean": "rimraf lib",
     "ava": "ava --verbose",
-    "build": "NODE_ENV=production babel ./src --extensions \".ts\" --out-dir lib",
+    "build": "NODE_ENV=production babel ./src --extensions \".ts\" --out-dir lib && cp types/index.d.ts lib",
     "test": "npm-run-all build ava"
   },
   "ava": {
