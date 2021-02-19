@@ -1,0 +1,89 @@
+{
+  "name": "@pkimbrel/redux-promise",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Promise middleware for Redux.  Based on redux-utilities/redux-promise by .",
+  "repository": "github:pkimbrel/redux-promise",
+  "bugs": "https://github.com/pkimbrel/redux-promise/issues",
+  "homepage": "https://github.com/pkimbrel/redux-promise",
+  "keywords": [
+    "redux",
+    "promise",
+    "middleware",
+    "redux-middleware",
+    "flux"
+  ],
+  "author": "Paul Kimbrel <pkimbrel@gmail.com>",
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "start": "nodemon",
+    "clean": "rimraf lib",
+    "ava": "ava --verbose",
+    "build": "NODE_ENV=production babel ./src --extensions \".ts\" --out-dir lib",
+    "test": "npm-run-all build ava"
+  },
+  "ava": {
+    "babel": {
+      "extensions": [
+        "ts"
+      ],
+      "testOptions": {
+        "presets": [
+          "@babel/typescript"
+        ],
+        "plugins": [
+          "@babel/proposal-class-properties",
+          "@babel/proposal-object-rest-spread"
+        ]
+      }
+    },
+    "files": [
+      "test/**/*"
+    ],
+    "require": [
+      "@babel/register",
+      "esm"
+    ]
+  },
+  "peerDependencies": {
+    "redux": "^4"
+  },
+  "dependencies": {
+    "flux-standard-action": "^2.1.1"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-transform-typescript": "^7.12.1",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.21",
+    "@types/redux": "^3.6.0",
+    "@types/sinon": "^9.0.10",
+    "ava": "^3.5.2",
+    "babel-plugin-inline-dotenv": "^1.5.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "eslint-plugin-typescript": "^0.14.0",
+    "express": "^4.17.1",
+    "minimist": "^1.2.5",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "ts-sinon": "^2.0.1",
+    "typescript": "^4.1.3"
+  }
+}
