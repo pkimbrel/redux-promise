@@ -1,6 +1,6 @@
 {
   "name": "@pkimbrel/redux-promise",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "description": "Promise middleware for Redux.  Based on https://github.com/redux-utilities/redux-promise by https://github.com/timche.",
   "repository": {
