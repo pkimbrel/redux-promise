@@ -3,7 +3,7 @@ import { Middleware } from "redux";
 export interface PromisePayload<A, P> {
   type: A;
   payload?: P;
-  error?: string;
+  error?: any;
   status: "fetching" | "resolved" | "rejected";
 }
 
